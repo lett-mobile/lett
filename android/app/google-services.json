@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "812232727543",
+    "project_id": "lett-40fda",
+    "storage_bucket": "lett-40fda.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:812232727543:android:0a40bd7a9de783a029acf2",
+        "android_client_info": {
+          "package_name": "com.codingcanary.lett.lett"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD36g16k2gC9HMhhIXZvvRBhvlu8E4cO28"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
