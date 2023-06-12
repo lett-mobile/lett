@@ -2,8 +2,13 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:lett/view/login.dart';
 import 'package:lett/view/mixin/mixin_button.dart';
+import 'package:lett/view/reset_password.dart';
+import 'package:lett/view/signup.dart';
 import 'package:lett/view/theme/theme_lett.dart';
+import 'package:lett/viewmodel/viewmodel_signup.dart';
+import 'package:provider/provider.dart';
 import 'package:universal_io/io.dart';
 
 void main() async {
@@ -32,20 +37,34 @@ void main() async {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    /*return MaterialApp(
       title: 'Email Login Demo',
       theme: LettTheme.lightTheme,
       initialRoute: '/',
       routes: {
-        '/': (context) => SignupPage(),
+        '/': (context) => LoginPage(),
         '/second': (context) => SecondPage(),
       },
       // home: SignupPage(),
+    );*/
+
+    return ChangeNotifierProvider(
+      create: (_) => SignUpViewModel(),
+      child: MaterialApp(
+        title: 'Email Login Demo',
+        theme: LettTheme.lightTheme,
+        initialRoute: '/',
+        routes: {
+          '/': (context) => const LoginPage(),
+          '/signup': (context) => const SignUpPage(),
+          '/reset_password': (context) => const ResetPasswordPage(),
+        },
+      ),
     );
   }
 }
 
-class SignupPage extends StatefulWidget {
+/*class SignupPage extends StatefulWidget {
   @override
   _SignupPageState createState() => _SignupPageState();
 }
@@ -171,5 +190,5 @@ class SecondPage extends StatelessWidget {
         ),
       ),
     );
-  }
-}
+  }*/
+
