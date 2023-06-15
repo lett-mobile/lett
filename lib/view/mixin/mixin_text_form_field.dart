@@ -4,8 +4,10 @@ mixin TextFormFieldMixin {
   Widget buildTextFormFieldMixin(
       String labelText, ValueChanged<String> onChanged) {
     return TextFormField(
-      decoration: InputDecoration(labelText: labelText),
-      onChanged: onChanged,
-    );
+        decoration: InputDecoration(labelText: labelText),
+        onChanged: onChanged,
+        style: TextStyle(
+          color: Colors.black,
+        ));
   }
 }

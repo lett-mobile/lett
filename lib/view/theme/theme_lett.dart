@@ -23,7 +23,9 @@ class LettTheme {
   );
 
   static TextTheme buildTextTheme() {
-    return TextTheme();
+    return TextTheme(
+      
+    );
   }
 
   static ButtonThemeData buildButtonTheme() {
