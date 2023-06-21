@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:lett/view/mixin_error_message.dart';
+import 'package:lett/shared/utils/utils_mixins/mixin_error_message.dart';
 
 class ErrorTextWidget extends StatelessWidget with ErrorMessageMixin {
   final String errorMessage;

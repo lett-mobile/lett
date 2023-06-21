@@ -20,5 +20,13 @@ class LettColors {
     return colors[DateTime.now().microsecondsSinceEpoch % colors.length];
   }
 
+  static Color get successColor {
+    return Colors.green;
+  }
+
+  static Color get errorColor {
+    return Colors.red;
+  }
+
   // Add more color-related methods as needed...
 }

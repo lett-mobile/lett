@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:lett/view/colors.dart';
+import 'package:lett/shared/utils/colors.dart';
 
 class LettTheme {
   static ThemeData lightTheme = ThemeData.light().copyWith(
@@ -13,7 +13,7 @@ class LettTheme {
   );
 
   static ThemeData darkTheme = ThemeData.dark().copyWith(
-    primaryColor: LettColors.primaryColor,
+    primaryColor: Color.fromARGB(255, 194, 78, 187),
     textTheme: buildTextTheme(),
     buttonTheme: buildButtonTheme(),
     colorScheme: ColorScheme.fromSwatch()
@@ -24,13 +24,18 @@ class LettTheme {
 
   static TextTheme buildTextTheme() {
     return TextTheme(
-      
+      bodyLarge:
+          TextStyle(fontSize: 24.0), // Example: Set font size to 16 pixels
+      displayLarge:
+          TextStyle(fontSize: 34.0), // Example: Set font size to 24 pixels
+      // Define other text styles with desired font sizes...
     );
   }
 
   static ButtonThemeData buildButtonTheme() {
     return ButtonThemeData(
       buttonColor: LettColors.accentColor,
+      
       // Other button theme properties...
     );
   }
